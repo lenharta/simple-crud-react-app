@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { Layout, NewPost } from "./components";
+import { About, Contact, EditPost, Home, NotFound, Post, Welcome } from "./routes";
+import { GlobalStyle } from "./styles/GlobalStyle";
+import { Routes, Route } from "react-router-dom";
+import { DataProvider } from "./context/DataContext";
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <DataProvider>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+
+            <Route path="post">
+              <Route index element={<NewPost />} />
+              <Route path=":id" element={<Post />} />
+            </Route>
+
+            <Route path="edit/:id" element={<EditPost />} />
+
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="welcome" element={<Welcome />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </DataProvider>
+    </>
   );
-}
+};
 
 export default App;
+
+// USE WITH FRAMER FOR ANIMATED ROUTES
+
+// const location = useLocation();
+/* <AnimatePresence>
+  <Routes location={location} key={location.pathname}>
+  <Route path="/" element={<Layout search={search} setSearch={setSearch} />}>
+  <Route index element={<Home posts={setPosts} />} />
+  <Route path="about" element={<About />} />
+  <Route path="welcome" element={<Welcome />} />
+  <Route path="post/:id" element={<Post posts={setPosts} />} />
+  <Route path="*" element={<NotFound />} />
+  </Route>
+  </Routes>
+</AnimatePresence> */

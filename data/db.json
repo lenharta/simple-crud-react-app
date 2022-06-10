@@ -1,0 +1,54 @@
+{
+  "posts": [
+    {
+      "id": 0,
+      "title": "Test Post #1",
+      "datetime": "May 30, 2022 7:41:35 PM",
+      "body": "Lorem ipsum dolor sit emet. Lorem ipsum dolor sit emet. Lorem ipsum dolor sit emet. Lorem ipsum dolor sit emet. Lorem ipsum dolor sit emet. Lorem ipsum dolor sit emet. Lorem ipsum dolor sit emet. Lorem ipsum dolor sit emet. Lorem ipsum dolor sit emet. Lorem ipsum dolor sit emet. Lorem ipsum dolor sit emet. Lorem ipsum dolor sit emet. Lorem ipsum dolor sit emet. Lorem ipsum dolor sit emet. "
+    },
+    {
+      "id": 1,
+      "title": "Helo",
+      "datetime": "May 30, 2022 10:34:56 PM",
+      "body": "Helo"
+    },
+    {
+      "id": 2,
+      "title": "Helo",
+      "datetime": "May 30, 2022 10:35:31 PM",
+      "body": "Helo"
+    },
+    {
+      "id": 3,
+      "title": "Post Check",
+      "datetime": "May 30, 2022 10:36:49 PM",
+      "body": "Post Check"
+    },
+    {
+      "id": 4,
+      "title": "Post Check for Edit",
+      "datetime": "May 30, 2022 10:44:15 PM",
+      "body": "Post Check for"
+    }
+  ],
+  "userContacts": [
+    {
+      "id": 0,
+      "email": "example@example.com",
+      "datetime": "May 30, 2022 10:44:15 PM",
+      "message": "Here is my first example message."
+    },
+    {
+      "id": 1,
+      "email": "timestamp@example.com",
+      "datetime": "May 31, 2022 1:55:08 AM",
+      "message": "Added date timestamp to database."
+    },
+    {
+      "id": 2,
+      "email": "IDsequenceCheck@example.com",
+      "datetime": "May 31, 2022 1:56:19 AM",
+      "message": "Test for correct ID Sequence."
+    }
+  ]
+}
