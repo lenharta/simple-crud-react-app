@@ -9,11 +9,6 @@ const navData = [
   },
   {
     id: 2,
-    title: "About",
-    path: "about"
-  },
-  {
-    id: 3,
     title: "Contact",
     path: "/contact"
   }

@@ -11,12 +11,17 @@ const StyledForm = styled.form`
   background-color: var(--clr-blue);
   color: var(--clr-primary);
 
+  input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: var(--clr-primary);
+  }
+
   label {
     position: absolute;
     left: -9999px;
   }
   input {
-    width: min(100%, 30rem);
+    width: 100%;
     font-size: 1.5rem;
     color: var(--clr-primary);
     font-family: var(--type-font-primary);
@@ -40,7 +45,7 @@ const SearchBar = () => {
         <GlobalContainer>
           <StyledForm onSubmit={(e) => e.preventDefault}>
             <label htmlFor="search">Search Posts</label>
-            <input 
+            <input
               id="search"
               type="text"
               placeholder="Search Posts"
